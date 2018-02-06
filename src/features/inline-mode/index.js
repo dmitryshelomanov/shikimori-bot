@@ -10,7 +10,7 @@ module.exports = (bot) => {
     const { data } = await api.searchAnime(string)
 
     telegram.answerInlineQuery(inlineQuery.id, generateAnswer(data), {
-      parse_mode: 'Markdown',
+      cache_time: 0,
     })
   })
 }

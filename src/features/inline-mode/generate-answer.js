@@ -1,6 +1,7 @@
 const { anime: { captionInline } } = require('../../utils/text')
 const { baseURL } = require('../../config')
 
+
 module.exports = (list) => list.map((item) => (
   item = {
     id: item.id,

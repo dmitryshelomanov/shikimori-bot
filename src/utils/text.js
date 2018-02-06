@@ -12,7 +12,7 @@ module.exports = {
 *Тип* - ${anime.kind || '??'}
 *Ссылка* - [click to go](${baseURL}${anime.url})
     `),
-    captionInline: (anime, type) => (`
+    captionInline: (anime) => (`
 Название - ${anime.name}, (${anime.russian})
 Статус - ${anime.status || '??'}
 Эпизоды - ${anime.episodes || '??'}
