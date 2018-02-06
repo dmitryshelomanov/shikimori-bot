@@ -3,7 +3,8 @@ const { baseURL } = require('../config')
 
 module.exports = {
   anime: {
-    caption: (anime) => (`
+    caption: (anime, type) => (`
+*${type}*
 *Название* - ${anime.name}, (${anime.russian})
 *Статус* - ${anime.status}
 *Эпизоды* - ${anime.episodes}
