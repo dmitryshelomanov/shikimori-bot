@@ -16,6 +16,10 @@ class Api {
   async getMangaById(id) {
     return await this.request.get(`/mangas/${id}`)
   }
+
+  async searchAnime(s) {
+    return await this.request.get(`/animes?search=${s}&limit=10`)
+  }
 }
 
 module.exports = new Api()
