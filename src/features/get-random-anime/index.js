@@ -1,25 +1,14 @@
+const debug = require('debug')('anime-bot:get-random-anime')
 const { anime: { caption } } = require('../../utils/text')
-const api = require('../../utils/api')
 const { baseURL } = require('../../config')
+const mangaOrAnime = require('./manga-or-anime')
 
-
-async function mangaOrAnime(random) {
-  if (random === 0) {
-    return [
-      await api.getAnimeById(Math.floor(Math.random() * 3000)),
-      'Аниме',
-    ]
-  }
-  return [
-    await api.getMangaById(Math.floor(Math.random() * 3000)),
-    'Манга',
-  ]
-}
 
 module.exports = (bot) => {
   bot.command('random', async ({
     replyWithPhoto, replyWithMarkdown, replyWithChatAction,
   }) => {
+    debug('random title')
     try {
       const [{ data }, type] = await mangaOrAnime(Math.floor(Math.random() * 2))
 
