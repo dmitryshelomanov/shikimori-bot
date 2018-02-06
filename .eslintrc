@@ -6,6 +6,8 @@
   },
   "rules": {
     "linebreak-style":"off",
-    "no-return-await": "off"
+    "no-return-await": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off"
   }
 }
