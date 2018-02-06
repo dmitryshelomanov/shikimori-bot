@@ -4,7 +4,7 @@ const { baseURL } = require('../../config')
 
 
 module.exports = (bot) => {
-  bot.command('animeRandom', async ({
+  bot.command('random', async ({
     replyWithPhoto, replyWithMarkdown, replyWithChatAction,
   }) => {
     try {
