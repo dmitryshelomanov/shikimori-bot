@@ -11,7 +11,7 @@ module.exports = (bot) => {
   bot.use(stage.middleware())
   bot.command('cancel', (ctx) => {
     leave(ctx)
-    ctx.reply(sceneAbort())
+    ctx.replyWithMarkdown(sceneAbort())
   })
 
   features.forEach((f) => {
