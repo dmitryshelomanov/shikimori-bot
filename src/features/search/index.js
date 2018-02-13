@@ -8,7 +8,7 @@ const search = (bot, { stage, leave }) => {
   const simpleSearch = new Scene('simple-search')
 
   simpleSearch.enter(({ replyWithMarkdown }) => replyWithMarkdown(text.greeting()))
-  simpleSearch.hears(/^[^//]+$/gi, async ({
+  simpleSearch.hears(/^[^/\\/]+$/gi, async ({
     replyWithChatAction, replyWithMarkdown, scene, message,
   }) => {
     debug('search anime', message.text)
