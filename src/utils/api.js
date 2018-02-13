@@ -17,8 +17,8 @@ class Api {
     return await this.request.get(`/mangas/${id}`)
   }
 
-  async searchAnime(s) {
-    return await this.request.get(`/animes?search=${s}&limit=20`)
+  async searchAnime(s, limit = 20) {
+    return await this.request.get(`/animes?search=${s}&limit=${limit}`)
   }
 }
 

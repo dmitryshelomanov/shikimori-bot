@@ -2,7 +2,7 @@ const api = require('../../utils/api')
 const generateAnswer = require('./generate-answer')
 
 
-module.exports = (bot) => {
+const inlineMode = (bot) => {
   bot.on('inline_query', async ({
     inlineQuery, update, telegram,
   }) => {
@@ -14,3 +14,5 @@ module.exports = (bot) => {
     })
   })
 }
+
+module.exports = inlineMode

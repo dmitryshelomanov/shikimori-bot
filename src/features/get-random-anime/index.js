@@ -4,7 +4,7 @@ const { baseURL } = require('../../config')
 const mangaOrAnime = require('./manga-or-anime')
 
 
-module.exports = (bot) => {
+const getRandomAnime = (bot) => {
   bot.command('random', async ({
     replyWithPhoto, replyWithMarkdown, replyWithChatAction,
   }) => {
@@ -23,3 +23,5 @@ module.exports = (bot) => {
     }
   })
 }
+
+module.exports = getRandomAnime
