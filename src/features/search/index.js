@@ -1,4 +1,5 @@
 const Scene = require('telegraf/scenes/base')
+const debug = require('debug')('anime-bot:search')
 const { simpleSearch: text, anime } = require('../../utils/text')
 const api = require('../../utils/api')
 
@@ -10,6 +11,7 @@ const search = (bot, { stage, leave }) => {
   simpleSearch.hears(/[A-zА-я0-9]+/gi, async ({
     replyWithChatAction, replyWithMarkdown, scene, message,
   }) => {
+    debug('search anime', message.text)
     try {
       const { data } = await api.searchAnime(message.text, 5)
 
